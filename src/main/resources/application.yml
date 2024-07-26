@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: <git repository>
+          skipSslValidation: true
+          force-pull: true
+          search-paths: dev
+          username: <git username>
+          password: <git password>
+
+server:
+  port: 8888
