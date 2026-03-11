@@ -5,12 +5,12 @@ spring:
     config:
       server:
         git:
-          uri: <git repository>
+          uri: ${GIT_URI}
           skipSslValidation: true
           force-pull: true
-          search-paths: dev
-          username: <git username>
-          password: <git password>
+          search-paths: dev, prod
+          username: ${GIT_USERNAME}
+          password: ${GIT_PASSWORD}
 
 server:
   port: 8888
