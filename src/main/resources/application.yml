@@ -6,11 +6,11 @@ spring:
       server:
         git:
           uri: ${GIT_URI}
+          username: ${GIT_USERNAME}
+          password: ${GIT_TOKEN}
           skipSslValidation: true
           force-pull: true
           search-paths: dev, prod
-          username: ${GIT_USERNAME}
-          password: ${GIT_PASSWORD}
 
 server:
   port: ${PORT:8888}
