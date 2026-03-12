@@ -1,8 +1,9 @@
 FROM eclipse-temurin:17-jdk
 
 WORKDIR /app
+
 COPY . .
 
-RUN ./gradlew build
+RUN ./gradlew build && ls build/libs
 
-CMD ["java","-jar","build/libs/*.jar"]
+CMD sh -c "java -jar build/libs/*.jar"
