@@ -6,4 +6,4 @@ COPY . .
 
 RUN ./gradlew build -x test
 
-CMD ["java","-jar","build/libs/*SNAPSHOT.jar"]
+CMD sh -c "java -jar $(ls build/libs/*.jar | grep -v plain)"
