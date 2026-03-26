@@ -10,7 +10,7 @@ spring:
           password: ${GIT_TOKEN}
           skipSslValidation: true
           force-pull: true
-          search-paths: dev, prod
+          search-paths: '{profile}'
 
 server:
   port: ${PORT:8888}
